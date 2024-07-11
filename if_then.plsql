@@ -1,3 +1,7 @@
+-- language: plsql
+
+
+
 declare
  n_sales number := 5000000;
 

@@ -1,3 +1,6 @@
+-- language: plsql
+
+
 Begin 
 
   Dbms_output.put_line('NUMBER' || 2/0);

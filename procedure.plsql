@@ -1,3 +1,6 @@
+-- language: plsql
+
+
 CREATE OR REPLACE PROCEDURE greet_person (
     p_name IN VARCHAR2
 )

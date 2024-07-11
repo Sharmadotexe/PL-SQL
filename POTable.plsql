@@ -1,3 +1,6 @@
+-- language: plsql
+
+
 create table vendor(
    vendorID Number Primary Key,
    Vendor_name Varchar2(20),
