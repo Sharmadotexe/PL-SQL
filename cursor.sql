@@ -1,3 +1,8 @@
+-- language: sql
+
+
+
+
 Declare
     Cursor emp_cursor is
       select employee_id, first_name, last_name

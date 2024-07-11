@@ -11,7 +11,7 @@ END;
 /
 
 
-
+------------------------------------------------------------------------------------ 
 
 
 
@@ -34,9 +34,10 @@ END;
 /
 
 
+-----------------------------------------------------------------------------------------
 
 DECLARE 
-n_sales number := 1000;
+n_Sales number := 2010;
 n_commission number(10,2) := 0;
 
 begin 
@@ -46,22 +47,24 @@ THEN
 n_commission:= n_Sales*0.1;
 DBMS_OUTPUT.PUT_LINE('commission for sales more than desired goal: '|| n_commission);
 
-ELSE IF
-  n_Sales <= 2000 and n_Sales >= 1000
+ELSIF n_Sales <= 2000 and n_Sales >= 1000 THEN
 n_commission:= n_Sales*0.05;
+DBMS_OUTPUT.PUT_LINE('commission for sales btw than desired goal: '|| n_commission);
+
+
+ELSE 
+n_commission:= n_Sales*0.01;
 DBMS_OUTPUT.PUT_LINE('commission for sales less than desired goal: '|| n_commission);
-
-
-ELSE IF
-n_commission:= n_Sales*0.05;
-DBMS_OUTPUT.PUT_LINE('commission for sales less than desired goal: '|| n_commission);
-
-
 
 
 END IF;
 END;
 /
+
+
+-----------------------------------------------------------------------------------------
+
+
 
 
 
