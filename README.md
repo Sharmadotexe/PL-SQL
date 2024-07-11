@@ -1,1 +1,1 @@
-# This a Project Repository for internship.
+# This is a Project Repository for Internship.
