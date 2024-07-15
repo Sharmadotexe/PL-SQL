@@ -15,5 +15,34 @@ end;
 /
 
 
+------------------------------------------------------------------
+
+
+DECLARE
+ i number :=0;
+ j number :=0;
+
+
+ begin 
+ <<outer_loop>>
+ LOOP
+ i := i+1;
+ exit outer_loop when i > 2;
+ DBMS_OUTPUT.PUT_LINE('OUTER LOOP' || i);
+
+j := 0;
+<<inner_loop>>
+LOOP
+j := j+1;
+exit inner_loop when j > 3;
+ DBMS_OUTPUT.PUT_LINE('INNER LOOP' || j);
+
+end loop inner_loop;
+end loop outer_loop;
+end;
+/
+
+
+
 
 
