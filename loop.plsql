@@ -43,6 +43,52 @@ end;
 /
 
 
+--------------------------------------------------------
 
 
+
+declare
+counter number := 0;
+begin
+for counter in 1..5
+loop 
+DBMS_OUTPUT.PUT_LINE('VALUE OF COUNTER : '|| counter);
+end loop;
+end;
+
+
+
+----------------------------------------------------------
+
+
+declare
+counter number :=0;
+step PLS_INTEGER := 2;
+
+BEGIN
+for counter in 1..5 LOOP
+DBMS_OUTPUT.PUT_LINE(counter * step);
+end loop;
+end;
+
+
+-----------------------------------------------------------
+
+
+declare
+i pls_integer :=0;
+
+begin
+for i in 1..10
+loop
+if mod(i,2)=1 then
+continue;
+end if;
+DBMS_OUTPUT.PUT_LINE(i);
+end loop;
+end;
+
+
+
+-----------------------------------
 
