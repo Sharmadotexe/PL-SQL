@@ -41,5 +41,10 @@ DBMS_OUTPUT.PUT_LINE(SQLERRM);
 end;
 
 
+--execute PROCEDURE
+exec print_contact(100);
 
 
+-- drop PROCEDURE
+
+drop procedure print_contact;
