@@ -20,3 +20,26 @@ END;
 
 
 
+
+
+
+
+create or replace PROCEDURE print_contact(
+    in_customer_id number
+)
+is 
+r_contact contacts%ROWTYPE%
+
+BEGIN
+SELECT * INTO r_contact from contacts where customer_id = in_customer_id
+
+DBMS_OUTPUT.PUT_LINE(r_contact.first_name || ' ' || r_conatct.last_name || '<'  || r_contact.email || '>');
+
+EXCEPTION
+when others then
+DBMS_OUTPUT.PUT_LINE(SQLERRM);
+end;
+
+
+
+
