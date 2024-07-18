@@ -27,3 +27,29 @@ update customers set credit_limit = 2000 where customer_id = 10;
 
 select * from audits;
 
+
+
+
+
+------------------------------------------
+
+
+
+create or replace trigger customers_credit_trg
+before update of credit_limit 
+on customers
+
+DECLARE
+l_day_of_month NUMBER
+
+BEGIN
+l_day_of_month := extract =(day from sysdate);
+
+if l_day_of_month between 28 and 31 
+
+raise_application_error(-20100, Cannot update customer credit from 28th to 31st);
+end if;
+end;
+/
+
+
